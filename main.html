@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ones Digit Function</title>
+    <script>
+        function onesDigit(number) {
+            // Check if the input is a valid positive integer
+            if (typeof number !== 'number' || !Number.isInteger(number) || number <= 0) {
+                throw new Error("Input must be a positive integer.");
+            }
+
+            // Return the ones digit using modulus operator
+            return number % 10;
+        }
+
+        // Example usage
+        function testOnesDigit() {
+            try {
+                console.log(onesDigit(2674)); // Output: 4
+                console.log(onesDigit(105));  // Output: 5
+                console.log(onesDigit(7));    // Output: 7
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+    </script>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <h1>Ones Digit Function</h1>
+    <button onclick="testOnesDigit()">Test Ones Digit</button>
+    <p>Open the browser console to view the results.</p>
 </body>
-
 </html>
+
